@@ -196,39 +196,156 @@
 /* Coding Chalenge 2 */ 
 
 // 1. Caluclate the average score for each team
-var johnTeamAvg = (89 + 120 + 103) / 3;
-var mikeTeamAvg = (116 + 94 + 123) / 3;
+// var johnTeamAvg = (89 + 120 + 103) / 3;
+// var mikeTeamAvg = (116 + 94 + 123) / 3;
 
 // 2. Decide which team wins and print to console
 
-if (johnTeamAvg > mikeTeamAvg) {
-  console.log('john\'s team wins');
-} else {
-  console.log('mike\'s team wins');
-}
+// if (johnTeamAvg > mikeTeamAvg) {
+//   console.log('john\'s team wins');
+// } else {
+//   console.log('mike\'s team wins');
+// }
 
 // 3. take in account the option of a draw
-johnTeamAvg = 12;
-mikeTeamAvg = 12;
+// johnTeamAvg = 12;
+// mikeTeamAvg = 12;
 
-if (johnTeamAvg === mikeTeamAvg) {
-  console.log('They draw, no one wins');
-} else if (johnTeamAvg > mikeTeamAvg) {
-  console.log('john\'s team wins');
-} else {
-  console.log('mike\'s team wins');
-} 
+// if (johnTeamAvg === mikeTeamAvg) {
+//   console.log('They draw, no one wins');
+// } else if (johnTeamAvg > mikeTeamAvg) {
+//   console.log('john\'s team wins');
+// } else {
+//   console.log('mike\'s team wins');
+// } 
 
 // 4. 
-var maryTeamAvg = (97 + 134 + 105) / 3;
-maryTeamAvg = 12
+// var maryTeamAvg = (97 + 134 + 105) / 3;
+// maryTeamAvg = 12;
 
-if (johnTeamAvg === mikeTeamAvg && maryTeamAvg === mikeTeamAvg) {
-  console.log('They draw, no one wins');
-} else if (johnTeamAvg > mikeTeamAvg && johnTeamAvg > maryTeamAvg) {
-  console.log('john\'s team wins');
-} else if (mikeTeamAvg > johnTeamAvg && mikeTeamAvg > maryTeamAvg) {
-  console.log('mike\'s team wins');
-} else if (maryTeamAvg > johnTeamAvg && maryTeamAvg > mikeTeamAvg) {
-  console.log('mary\'s team wins');
+// if (johnTeamAvg === mikeTeamAvg && maryTeamAvg === mikeTeamAvg) {
+//   console.log('They draw, no one wins');
+// } else if (johnTeamAvg > mikeTeamAvg && johnTeamAvg > maryTeamAvg) {
+//   console.log('john\'s team wins');
+// } else if (mikeTeamAvg > johnTeamAvg && mikeTeamAvg > maryTeamAvg) {
+//   console.log('mike\'s team wins');
+// } else if (maryTeamAvg > johnTeamAvg && maryTeamAvg > mikeTeamAvg) {
+//   console.log('mary\'s team wins');
+// }
+
+
+// function  calculateAge(birthYear) {
+//   return 2019 - birthYear;
+// }
+
+// var ageMe = calculateAge(1989);
+// var ageBear = calculateAge(1990);
+// var agedoggo = calculateAge(2017);
+// console.log(ageMe, ageBear, agedoggo);
+
+// function yearsUntilRetirement(year, firstName) {
+//   var age = calculateAge(year);
+//   var retirement = 65 - age;
+
+//   if (retirement > 0 ) {
+//     console.log(firstName + ' retires in ' + retirement + ' years');
+//   } else {
+//     console.log(firstName + 'is already retired');
+//   }
+// }
+
+// yearsUntilRetirement(1940, 'John');
+
+
+/******************************
+* Function Statements and Expressions  
+*/
+
+// Function declaration 
+// function whatDoYouDo(job, firstName) {}
+
+// Function Expression
+// returns a single value, this function, 2 + 3, typeof 23, 
+// var whatDoYouDo = function(job, firstName) {
+//   switch (job) {
+//     case 'teacher': 
+//       return firstName + ' teaches kids to code';
+//     case 'driver': 
+//       return firstName + ' drive a cab';
+//     case 'designer':
+//       return firstName + ' makes beautiful websites';
+//     default:
+//       return firstName + ' does something else';      
+//   }
+// }
+
+// console.log(whatDoYouDo('teacher', 'John'));
+// console.log(whatDoYouDo('retired', 'Jim'));
+
+/*********************************
+* Arrays 
+*/
+
+// var names = ['John', 'Mark', 'Jane'];
+// var years = new Array(1990, 1969, 1948);
+
+// console.log(names[2]);
+// console.log(names.length);
+// alternative to shoveling 
+
+// names[1] = 'Ben';
+// names[names.length] = 'Mary';
+// console.log(names);
+
+// another alternative to shoveling
+// names.push('Bob');
+// console.log(names);
+
+// to put an element at the begining of an array
+// names.unshift('Mabel');
+// console.log(names);
+// removes last element
+// names.pop();
+// console.log(names);
+// removes first element 
+// names.shift();
+// console.log(names);
+
+// returns index of an element, good for checking if something exists in an array
+// console.log(names.indexOf('Ben'));
+
+// var isLast = names.indexOf('Mabel') === -1 ? 'They are not last' : 'They are last';
+// console.log(isLast);
+
+
+/***************************************
+* Coding Challenge # 3  
+*/ 
+
+var restaurantBills = [124, 48, 268];
+var allTips = [];
+var allTotals = [];
+
+function tipCalculator(billedAmt) {
+  var total; 
+  var tip;
+  if (billedAmt > 200) {
+    tip = (billedAmt * .1); 
+    total = tip + billedAmt;
+  } else if (billedAmt < 200 && billedAmt >= 50) {
+    tip = (billedAmt * .15); 
+    total = tip + billedAmt;
+  } else {
+    tip = (billedAmt * .2);
+    total = tip + billedAmt;
+  }
+  allTips.push(tip);
+  allTotals.push(total);
 }
+
+tipCalculator(restaurantBills[0]);
+tipCalculator(restaurantBills[1]);
+tipCalculator(restaurantBills[2]);
+
+console.log(allTotals);
+console.log(allTips);
