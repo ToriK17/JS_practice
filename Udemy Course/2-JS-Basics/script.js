@@ -446,3 +446,42 @@
 * Loops and iteration
 */
 
+// for (var i = 0; i <= 10; i++) {
+//   console.log(i);
+// }
+
+// We use .length because it dynamically changes the length.
+
+// var john = ['John', 'Smith', 1990, 'designer', false];
+// for (var i = 0; i < john.length; i++) {
+//   console.log(john[i]);
+// }
+
+// The While loop
+// var john = ['John', 'Smith', 1990, 'designer', false];
+// var i = 0;
+// while (i < john.length) {
+//   console.log(john[i]);
+// }
+// The main difference is that we define the iterator outside of the loop
+
+
+// Continue and Break Statements
+// var john = ['John', 'Smith', 1990, 'designer', false];
+// for (var i = 0; i < john.length; i++) {
+//   if (typeof john[i] !== 'string') continue;
+//   console.log(john[i]);
+// }
+// replacing the continue with break is a hard exit, continue will skip through but keep running the loop
+
+// Looping Backwards
+
+// var j = john.length - 1;
+// while (j > -1) {
+//   console.log(john[j]);
+//   j --; 
+// }
+
+// for (var i = john.length - 1; i >= 0; i--) {
+//   console.log(john[i]);
+// }
