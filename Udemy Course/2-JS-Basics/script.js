@@ -70,7 +70,7 @@
 // var johnHeight = 155;
 
 // calculate both BMI
-// var markBmi = markMass / (markHeight *markHeight);
+// var markBmi = markMass / (markHeight * markHeight);
 // var johnBmi = johnMass / (johnHeight * johnHeight);
 
 // create a boolean variable to show if Mark has a higher BMI than john 
@@ -291,23 +291,23 @@
 
 // console.log(names[2]);
 // console.log(names.length);
-// alternative to shoveling 
 
+// alternative to shoveling 
 // names[1] = 'Ben';
 // names[names.length] = 'Mary';
 // console.log(names);
 
-// another alternative to shoveling
+// another alternative to shoveling: push adds to end of an array
 // names.push('Bob');
 // console.log(names);
 
-// to put an element at the begining of an array
+// to put an element at the begining of an array: unshift
 // names.unshift('Mabel');
 // console.log(names);
-// removes last element
+// removes last element: pop
 // names.pop();
 // console.log(names);
-// removes first element 
+// removes first element: shift 
 // names.shift();
 // console.log(names);
 
@@ -322,30 +322,127 @@
 * Coding Challenge # 3  
 */ 
 
-var restaurantBills = [124, 48, 268];
-var allTips = [];
-var allTotals = [];
+// var restaurantBills = [124, 48, 268];
+// var allTips = [];
+// var allTotals = [];
 
-function tipCalculator(billedAmt) {
-  var total; 
-  var tip;
-  if (billedAmt > 200) {
-    tip = (billedAmt * .1); 
-    total = tip + billedAmt;
-  } else if (billedAmt < 200 && billedAmt >= 50) {
-    tip = (billedAmt * .15); 
-    total = tip + billedAmt;
-  } else {
-    tip = (billedAmt * .2);
-    total = tip + billedAmt;
-  }
-  allTips.push(tip);
-  allTotals.push(total);
-}
+// function tipCalculator(billedAmt) {
+//   var total; 
+//   var tip;
+//   if (billedAmt > 200) {
+//     tip = (billedAmt * .1); 
+//     total = tip + billedAmt;
+//   } else if (billedAmt < 200 && billedAmt >= 50) {
+//     tip = (billedAmt * .15); 
+//     total = tip + billedAmt;
+//   } else {
+//     tip = (billedAmt * .2);
+//     total = tip + billedAmt;
+//   }
+//   allTips.push(tip);
+//   allTotals.push(total);
+// }
 
-tipCalculator(restaurantBills[0]);
-tipCalculator(restaurantBills[1]);
-tipCalculator(restaurantBills[2]);
+// tipCalculator(restaurantBills[0]);
+// tipCalculator(restaurantBills[1]);
+// tipCalculator(restaurantBills[2]);
 
-console.log(allTotals);
-console.log(allTips);
+// console.log(allTotals);
+// console.log(allTips);
+
+
+/*************************************
+* Objects and Properties
+*/
+
+// An object literal, defined with {}
+// This is an obect named john
+
+// var john = {
+//   firstName: 'John', 
+//   lastName: 'Smith', 
+//   birthYear: 1990, 
+//   family: ['Jane', 'Bob', 'Ed', 'Edd', 'Eddie'], 
+//   job: 'teacher', 
+//   isMarried: false
+// };
+
+// To access a property of our object we can use dot notation or brackets
+// console.log(john.firstName);
+// console.log(john['lastName']);
+// var x = 'birthYear';
+// console.log(john[x]);
+
+// john.job = 'designer';
+// john['isMarried'] = true;
+// console.log(john);
+
+// New object syntax
+// var jane = new Object();
+// jane.name = 'Jane';
+// jane.birthYear = 1969;
+// jane['lastName'] = 'Smith';
+// console.log(jane);
+
+/*****************************************
+* Objects and Methods
+*/
+
+// This keyword refers to a value within our object
+// var john = {
+//   firstName: 'John', 
+//   lastName: 'Smith', 
+//   birthYear: 1990, 
+//   family: ['Jane', 'Bob', 'Ed', 'Edd', 'Eddie'], 
+//   job: 'teacher', 
+//   isMarried: false, 
+//   calcAge: function() {
+//     this.age = 2019 - this.birthYear;
+//   }
+// };
+
+// we can also set properties like this, using the this property in the object ~this~ is special and powerful. 
+
+// john.calcAge();
+// console.log(john);
+
+/*********************************************
+* Coding Challenge 4 
+*/
+
+// var mark = {
+//   fullName: 'Mark Smith', 
+//   mass: 90,
+//   height: 1.40, 
+//   calcBmi: function() {
+//     this.bmi = this.mass / (this.height * this.height);
+//     return this.bmi;
+//   }
+// };
+
+// var john = {
+//   fullName: 'John Smith', 
+//   mass: 99,
+//   height: 1.40,
+//   calcBmi: function() {
+//     this.bmi = this.mass / (this.height * this.height);
+//     return this.bmi;
+//   }  
+// };
+
+
+// if (mark.calcBmi() > john.calcBmi()) {
+//   console.log('Mark has a heigher BMI');
+// } else if (john.calcBmi() > mark.calcBmi()) {
+//   console.log('john has a heigher BMI');
+// } else {
+//   console.log('They both have the same BMI');
+// }
+
+// console.log(mark['bmi']);
+// console.log(john.bmi);
+
+/**********************************************
+* Loops and iteration
+*/
+
