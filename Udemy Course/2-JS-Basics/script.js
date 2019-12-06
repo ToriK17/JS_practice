@@ -485,3 +485,47 @@
 // for (var i = john.length - 1; i >= 0; i--) {
 //   console.log(john[i]);
 // }
+
+/***********************************************
+*Coding Challenge #5 
+*/
+
+// var johnHoliday = {
+//   bills: [124, 48, 268, 180, 42],  
+//   calcTip: function() {
+//     var totalTips = [];
+//     var totalBilled = [];
+//     var tip;
+//     var fullBill;
+//     for (var i = 0; i < this.bills.length; i++)
+//       if (this.bills[i] < 50) {
+//         tip = (this.bills[i] * .2);
+//         totalTips.push(tip);
+//         fullBill = this.bills[i] + tip;
+//         totalBilled.push(fullBill);
+//       } else if (this.bills[i] > 50 && this.bills[i] < 200) {
+//         tip = (this.bills[i] * .15);
+//         totalTips.push(tip);
+//         fullBill = this.bills[i] + tip;
+//         totalBilled.push(fullBill);
+//       } else {
+//         tip = (this.bills[i] * .1);
+//         totalTips.push(tip);
+//         fullBill = this.bills[i] + tip;
+//         totalBilled.push(fullBill);
+//       }  
+
+//     console.log(totalBilled);
+//     console.log(totalTips);
+//   }
+    
+// };
+
+// johnHoliday.calcTip();
+// console.log(johnHoliday);
+
+
+/****************************************************
+*   
+*/
+
