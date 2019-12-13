@@ -8,3 +8,41 @@ GAME RULES:
 - The first player to reach 100 points on GLOBAL score wins the game
 
 */
+var scores, roundScore, activePlayer;
+
+scores = [0,0];
+roundScore = 0;
+activePlayer = 0;
+
+// dice = Math.floor(Math.random() * 6 ) + 1;
+
+//         querySelector selects values and elements just like we do in CSS
+// document.querySelector('#current-' + activePlayer).textContent = dice;
+//         using querySelector to manipulate the DOM via HTML
+//document.querySelector('#current-' + activePlayer).innerHTML = '<em>' + dice + '</em>';
+
+// document.querySelector('.dice').style.display = 'none';
+
+document.getElementById('score-0').textContent = '0';
+document.getElementById('score-1').textContent = '0';
+document.getElementById('current-0').textContent = '0';
+document.getElementById('current-1').textContent = '0';
+
+// we add a anonoymous function below in the addEventListener method. One without a name that cannot be reused outside this method
+
+document.querySelector('.btn-roll').addEventListener('click', function() {
+  // 1. Random number 
+  var dice = Math.floor(Math.random() * 6) + 1;
+
+  // 2. Display the result
+  var diceDOM = document.querySelector('.dice');
+  diceDOM.style.diplay = 'block';
+  diceDOM.src = 'dice-' + dice + '.png';
+
+  // 3. Update the round score IF the rolled number was NOT a 1 
+  if (dice !== 1) {
+    //add score
+  } else {
+    //next player
+  }
+});
